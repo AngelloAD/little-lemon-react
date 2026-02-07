@@ -1,0 +1,116 @@
+/* 
+  Booking page wrapper
+  Uses project primary green to visually separate the form section
+*/
+.booking-page {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 6rem;
+  background-color: #495e57;
+}
+
+/* 
+  Main form container
+  Card-style layout for clarity and focus
+*/
+.booking-form {
+  width: 100%;
+  max-width: 600px;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Form title */
+.booking-form h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #495e57;
+}
+
+/* Groups label + input for vertical rhythm */
+.form-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.form-row label {
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+
+/* Shared styles for inputs and selects */
+.form-row input,
+.form-row select {
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Focus state for accessibility */
+.form-row input:focus,
+.form-row select:focus {
+  border-color: #495e57;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(73, 94, 87, 0.25);
+}
+
+/* Valid state feedback */
+.form-row input.valid,
+.form-row select.valid {
+  border-color: #2a9d8f;
+}
+
+/* Error state feedback */
+.form-row input.invalid,
+.form-row select.invalid {
+  border-color: #ff4d4f;
+}
+
+/* Error messages */
+.error {
+  color: #ff4d4f;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+}
+
+/* Required field indicator */
+.required {
+  color: #ff4d4f;
+}
+
+/* Submit button
+   Uses project yellow for strong call-to-action */
+.booking-form button {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  background-color: #f4ce14;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.booking-form button:hover:enabled {
+  opacity: 0.9;
+}
+
+/* Disabled state clearly communicated */
+.booking-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .booking-page {
+    padding: 2rem 1rem;
+  }
+}

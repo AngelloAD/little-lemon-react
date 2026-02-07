@@ -1,0 +1,19 @@
+/* Global box-sizing rule to ensure consistent layout calculations */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+  Main layout container.
+  Centers content and limits the maximum width
+  while remaining fully responsive.
+*/
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 1rem; /* Adds breathing space on small screens */
+}
+

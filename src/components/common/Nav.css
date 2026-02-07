@@ -1,0 +1,148 @@
+/* =========================
+   NAVBAR BASE
+   ========================= */
+.navbar {
+  background-color: #fff; /* Light, clean background for a modern look */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  position: sticky; /* Keeps navbar visible on scroll */
+  top: 0;
+  z-index: 1000;
+  font-family: "Helvetica Neue", Arial, sans-serif; /* Modern font */
+}
+
+/* =========================
+   MAIN NAVBAR LAYOUT
+   ========================= */
+.navbar-content {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  padding: 1rem 5rem; /* Slightly tighter padding for modern design */
+  gap: 1rem;
+  min-width: 0;
+}
+
+/* =========================
+   LOGO
+   ========================= */
+.logo img {
+  height: 50px; /* Slightly larger logo */
+  display: block;
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1); /* Slight hover effect for interactivity */
+}
+
+/* =========================
+   NAV LINKS (DESKTOP)
+   ========================= */
+.nav-links ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #333;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+  background-color: #495e57; /* Brand accent color */
+  color: #fff;
+}
+
+/* =========================
+   HAMBURGER BUTTON
+   ========================= */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #495e57;
+  transition: transform 0.3s ease;
+}
+
+.hamburger:hover {
+  transform: rotate(90deg); /* Subtle rotation on hover */
+}
+
+/* =========================
+   MOBILE NAVIGATION
+   ========================= */
+@media (max-width: 900px) {
+  .navbar-content {
+    grid-template-columns: auto auto;
+    padding: 1rem 2rem;
+  }
+
+  .hamburger {
+    display: block; /* Only visible on mobile */
+    justify-self: end;
+  }
+
+  .nav-links {
+    display: none; /* Hidden by default */
+    grid-column: 1 / -1;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 10px 10px;
+    margin-top: 0.5rem;
+    padding: 1rem 0;
+    transition: max-height 0.3s ease-in-out;
+  }
+
+  .nav-links.open {
+    display: block; /* Show menu when open */
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 0;
+  }
+
+  .nav-links a {
+    width: 80%;
+    text-align: center;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+  }
+
+  .nav-links a:hover,
+  .nav-links a:focus-visible {
+    background-color: #495e57;
+    color: #fff;
+  }
+}
+
+/* =========================
+   RESPONSIVE FONTS & SPACING
+   ========================= */
+@media (max-width: 600px) {
+  .navbar-content {
+    padding: 1rem;
+  }
+
+  .nav-links a {
+    width: 90%;
+    font-size: 0.95rem;
+  }
+}

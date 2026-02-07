@@ -1,0 +1,148 @@
+/* =========================
+   ABOUT SECTION
+   ========================= */
+.about {
+  padding: 4rem 10rem;
+  background-color: #ffffff;
+}
+
+/* Inner layout uses flex for text + images balance */
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+/* =========================
+   TEXT CONTENT
+   ========================= */
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  color: #495e57; /* Brand green for primary heading */
+  margin-bottom: 0.5rem;
+}
+
+.about-text h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* =========================
+   IMAGES
+   ========================= */
+.about-images {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Shared image styles to avoid repetition */
+.about-images img {
+  width: 250px;
+  height: 320px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+/* Foreground image */
+.img-1 {
+  position: relative;
+  top: -30px;
+  z-index: 2;
+}
+
+/* Background image creates depth */
+.img-2 {
+  position: absolute;
+  top: 30px;
+  right: 120px;
+  z-index: 1;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .about {
+    padding: 3rem 1rem;
+  }
+
+  .about-container {
+    gap: 2rem;
+  }
+
+  .about-text h2 {
+    font-size: 2.1rem;
+  }
+
+  .about-text h3 {
+    font-size: 1.3rem;
+  }
+
+  .about-images img {
+    width: 220px;
+    height: 300px;
+  }
+
+  .img-2 {
+    right: 90px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-images {
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  /* Removing overlap improves clarity on small screens */
+  .img-1,
+  .img-2 {
+    position: static;
+  }
+
+  .about-images img {
+    width: 220px;
+    height: 280px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .about {
+    padding: 2.5rem 1rem;
+  }
+
+  .about-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-text h3 {
+    font-size: 1.2rem;
+  }
+
+  .about-images img {
+    width: 200px;
+    height: 260px;
+  }
+}

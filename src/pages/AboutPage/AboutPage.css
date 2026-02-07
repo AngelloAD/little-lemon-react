@@ -1,0 +1,126 @@
+/* ===== ABOUT PAGE =====
+   Page-level styles are intentionally minimal.
+   Layout spacing is handled by the global .container */
+.about-page {
+  background-color: #ffffff;
+  color: #495e57;
+}
+
+/* Compact hero keeps visual rhythm consistent with Home */
+.about-hero--compact {
+  padding: 3rem 0;
+}
+
+/* Two-column layout provides balance between text and imagery */
+.about-hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+/* Clear typographic hierarchy improves readability */
+.about-text h1 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 520px;
+}
+
+/* Image styling remains flexible for different aspect ratios */
+.about-image img {
+  width: 100%;
+  border-radius: 14px;
+}
+
+/* ===== STORY =====
+   Isolated vertical spacing avoids visual crowding */
+.about-story {
+  padding: 3rem 0;
+}
+
+.about-story h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about-story p {
+  max-width: 700px;
+  line-height: 1.7;
+}
+
+/* ===== VALUES =====
+   Highlight section uses brand yellow for emphasis */
+.about-values {
+  background-color: #f4ce14;
+  border-radius: 14px;
+  padding: 4rem 2rem;
+}
+
+/* Grid adapts progressively instead of collapsing abruptly */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.value-card {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 16px;
+}
+
+.value-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.value-card p {
+  line-height: 1.6;
+}
+
+/* =========================
+   ===== RESPONSIVE =====
+   ========================= */
+
+/* Tablet layout prioritizes readability */
+@media (max-width: 1024px) {
+  .about-hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-text p {
+    margin-inline: auto;
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile layout focuses on comfort and spacing */
+@media (max-width: 600px) {
+  .about-hero--compact {
+    padding: 2.5rem 0;
+  }
+
+  .about-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .about-story h2 {
+    font-size: 1.6rem;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .value-card {
+    padding: 1.5rem;
+  }
+}

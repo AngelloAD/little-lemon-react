@@ -1,0 +1,41 @@
+/*
+  Primary button style used across the application.
+  Designed to be responsive, accessible, and visually consistent.
+*/
+.primary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  max-width: 390px;
+  min-height: 48px;
+
+  background-color: #f4ce14;
+  color: #495e57;
+
+  border: none;
+  border-radius: 8px;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* Hover state for better user feedback */
+.primary-button:hover {
+  background-color: #e1bd13;
+}
+
+/* Active state for click feedback */
+.primary-button:active {
+  transform: scale(0.98);
+}
+
+/* Focus state for keyboard accessibility */
+.primary-button:focus-visible {
+  outline: 3px solid #495e57;
+  outline-offset: 2px;
+}

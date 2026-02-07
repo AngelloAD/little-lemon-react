@@ -1,0 +1,115 @@
+/* src/pages/LoginPage/LoginPage.css */
+
+/* Page layout */
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: #edefee;
+}
+
+/* Card container */
+.login-card {
+  max-width: 420px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+/* Title */
+.login-card h1 {
+  margin-bottom: 0.5rem;
+  color: #495e57;
+}
+
+/* Subtitle / description */
+.login-card p {
+  margin-bottom: 2rem;
+  color: #495e57;
+  font-size: 0.95rem;
+}
+
+/* Form layout */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Field group */
+.form-group {
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+  color: #495e57;
+}
+
+/* Inputs */
+.form-group input {
+  width: 100%;
+  padding: 0.7rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Focus state */
+.form-group input:focus {
+  outline: none;
+  border-color: #495e57;
+  box-shadow: 0 0 0 2px rgba(73, 94, 87, 0.25);
+}
+
+/* Validation states */
+.form-group input.valid {
+  border-color: #2a9d8f;
+}
+
+.form-group input.invalid {
+  border-color: #c0392b;
+}
+
+/* Error text */
+.error-message {
+  color: #c0392b;
+  font-size: 0.85rem;
+  margin-top: 0.3rem;
+}
+
+/* Required indicator */
+.required {
+  color: #c0392b;
+  margin-left: 2px;
+}
+
+/* Submit button */
+.login-button {
+  margin-top: 0.5rem;
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  background-color: #f4ce14;
+  color: #333;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.login-button:hover:enabled {
+  opacity: 0.9;
+}
+
+.login-button:disabled {
+  background-color: #ddd;
+  color: #888;
+  cursor: not-allowed;
+}

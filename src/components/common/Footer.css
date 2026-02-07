@@ -1,0 +1,95 @@
+/* =========================
+   FOOTER BASE STYLES
+   ========================= */
+.footer {
+  background-color: #495e57;
+  color: #ffffff;
+  padding: 3rem 0;
+}
+
+/* =========================
+   FOOTER GRID LAYOUT
+   ========================= */
+.footer-container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 2rem;
+}
+
+/* =========================
+   FOOTER LOGO
+   ========================= */
+.footer-logo img {
+  width: 160px;
+  height: auto;
+}
+
+/* =========================
+   FOOTER COLUMNS
+   ========================= */
+.footer-column h4 {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+/* =========================
+   FOOTER LINKS
+   ========================= */
+.footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Keyboard accessibility */
+.footer a:focus-visible {
+  outline: 2px solid #f4ce14;
+  outline-offset: 2px;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+   ========================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2.5rem;
+  }
+
+  /* Logo spans full width */
+  .footer-logo {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .footer {
+    text-align: center;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-logo img {
+    margin: 0 auto;
+  }
+}

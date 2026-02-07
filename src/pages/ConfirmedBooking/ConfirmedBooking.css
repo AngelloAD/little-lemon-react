@@ -1,0 +1,98 @@
+/* =========================
+   CONFIRMED BOOKING PAGE
+   ========================= */
+
+.confirmed-booking {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 80vh;
+  padding-top: 2rem;
+}
+
+.confirmation-card {
+  width: 100%;
+  max-width: 900px;
+  padding: 2rem 3rem;
+  background-color: #ffffff;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.confirmation-card h2 {
+  color: #495e57;
+  margin-bottom: 1rem;
+}
+
+.confirmation-card p {
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* =========================
+   BOOKINGS TABLE
+   ========================= */
+
+.table-wrapper {
+  max-height: 300px;
+  overflow-y: auto;
+  margin: 2rem 0;
+}
+
+.booking-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+
+.booking-table thead {
+  background-color: #495e57;
+  color: #ffffff;
+}
+
+.booking-table th,
+.booking-table td {
+  padding: 0.75rem 1rem;
+  border: 1px solid #dddddd;
+  text-align: center;
+}
+
+.booking-table tbody tr:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+.booking-table tbody tr:hover {
+  background-color: #eef3f2;
+}
+
+/* Highlights the most recent booking for visual feedback */
+.booking-table tbody tr.highlighted {
+  background-color: #f4ce14;
+  font-weight: 600;
+}
+
+/* =========================
+   ACTION BUTTONS
+   ========================= */
+
+.confirmation-actions {
+  margin-top: 1.5rem;
+}
+
+.action-button {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.6rem 1.4rem;
+  background-color: #f4ce14;
+  color: #000000;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.action-button:hover {
+  background-color: #e0bd12;
+}
